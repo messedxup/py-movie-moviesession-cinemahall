@@ -32,7 +32,7 @@ def update_movie_session(session_id: int,
                          movie_id: int = None,
                          cinema_hall_id: int = None) -> None:
     try:
-        movie_session = MovieSession.objects.get(id=session_id)
+        MovieSession.objects.get(id=session_id)
     except MovieSession.DoesNotExist:
         return
 
